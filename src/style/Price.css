@@ -1,0 +1,47 @@
+/* Bọc bảng trong container để kiểm soát kích thước */
+.service-table-container {
+  max-width: 1000px; /* Làm bảng to hơn */
+  margin: 30px auto;
+  /* background: #ffffff; */
+  border-radius: 12px;
+  padding: 20px;
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); */
+  overflow: hidden;
+}
+
+/* Đảm bảo tiêu đề bảng có màu trắng */
+.service-table-container .ant-table-thead > tr > th {
+  background: #d2691e !important;
+  color: white !important;
+  text-align: center !important;
+  font-weight: bold;
+  border-bottom: 2px solid white;
+  padding: 14px;
+  white-space: nowrap;
+  font-size: 18px;
+}
+
+/* Đảm bảo header không bị mờ */
+.service-table-container .ant-table-thead {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Hàng trong bảng */
+.service-table-container .ant-table-tbody > tr > td {
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* Hiệu ứng hover nhẹ nhàng hơn */
+.service-table-container .ant-table-tbody > tr:hover {
+  background: #f0f8ff;
+  transition: background 0.2s ease;
+}
+
+/* Giữ nguyên kích thước chữ trên header */
+.service-table-container .ant-table-thead > tr > th span {
+  font-size: 18px;
+  font-weight: bold;
+}

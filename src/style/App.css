@@ -1,0 +1,130 @@
+#root:has(.form-container) {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+form .ant-form-item-row {
+  display: flex;
+  flex-direction: column;
+}
+form .ant-form-item {
+  width: -webkit-fill-available;
+  margin: 22px 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* body:has(.form-container) {
+  background-image: url("https://dev.ddc.fis.vn/econstruction_web_client/assets/background-login-BeIlyCyv.png");
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+} */
+
+#root:has(.form-container) {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  margin-top: 30px;
+  /* padding-bottom: 4rem !important; */
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 380px;
+}
+
+.ant-form-item {
+  width: 100%;
+}
+
+.login-btn {
+  background-color: #003a82;
+  color: white;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.login-btn:hover {
+  background-color: #002b63;
+  color: white;
+}
+.ant-form-item-label label {
+  display: flex !important;
+  font-weight: 500;
+}
+.ant-form-item:nth-child(4) {
+  margin-bottom: 17px !important;
+  text-align: left;
+}
+.ant-form-item:has(.ant-form-item-explain-error) {
+  margin-bottom: 52px !important;
+}
+.ant-form-item-explain-error {
+  text-align: left;
+}
+:where(.css-dev-only-do-not-override-14i19y2).ant-form-item
+  .ant-form-item-label {
+  overflow: visible !important;
+}
+.ant-select-selection-item {
+  text-align: left;
+}
+:where(.css-dev-only-do-not-override-14i19y2).ant-form-item
+  .ant-form-item-label
+  > label.ant-form-item-required:not(
+    .ant-form-item-required-mark-optional
+  )::before {
+  display: none;
+}

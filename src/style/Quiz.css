@@ -1,0 +1,92 @@
+.quiz-container {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quiz-card {
+  /* background-color: green !important;
+  border: 2px solid #45b29d;  */
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-container .service-card .ant-card-body {
+  padding: 0 !important;
+}
+
+.quiz-container:has(.result-card) {
+  display: block !important;
+}
+
+.service-list .ant-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hiệu ứng hover: Phóng to nhẹ và đổ bóng */
+.quiz-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-text {
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.quiz-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.quiz-radio-group .ant-radio-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.quiz-button {
+  margin-top: 20px;
+  align-self: center;
+  background-color: coral !important;
+  color: burlywood;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hiệu ứng hover: đổi màu nút */
+.quiz-button:hover {
+  background-color: chocolate !important;
+}
+
+/* Hiệu ứng nhấn nút: thu nhỏ nhẹ */
+.quiz-button:active {
+  transform: scale(0.95);
+}
+
+.result-container {
+  text-align: center;
+}
+
+.result-description {
+  font-size: 16px;
+  color: #555;
+}

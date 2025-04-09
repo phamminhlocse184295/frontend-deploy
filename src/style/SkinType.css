@@ -1,0 +1,195 @@
+/* Chỉ áp dụng cho trang TypeOfSkin */
+.typeofskin {
+  /* Màu sắc tổng thể */
+  --primary-color: #795548; /* Nâu nhẹ */
+  --secondary-color: #a1887f; /* Nâu be */
+  --background-color: #faf3e0; /* Kem nhạt */
+  --card-background: #f5e0c3; /* Be sáng */
+  --text-color: #5d4037; /* Nâu đậm */
+  --border-radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Body */
+body.typeofskin {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Tiêu đề chính */
+body.typeofskin .title-main {
+  text-align: center;
+  /* font-size: 36px !important; */
+  font-weight: bold;
+  color: #5d4037 !important; /* Nâu đậm */
+  background: linear-gradient(90deg, #d7ccc8, #a1887f); /* Gradient tông nâu */
+  padding: 10px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow);
+  animation: fadeInDown 0.5s ease-out;
+}
+
+/* Card chứa nội dung */
+body.typeofskin .card-container {
+  /* width: 95vw;
+  max-width: 1200px; */
+  background: linear-gradient(
+    135deg,
+    #f3e5d8,
+    #d2b48c
+  ); /* Be sáng và nâu nhạt */
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.typeofskin .card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Tiêu đề từng loại da */
+body.typeofskin .skin-title {
+  font-size: 24px !important;
+  font-weight: bold;
+  color: var(--secondary-color) !important;
+  margin-top: 15px;
+  padding-left: 10px;
+  border-left: 5px solid var(--secondary-color);
+}
+
+/* Tiêu đề phụ */
+body.typeofskin .sub-title {
+  font-size: 20px !important;
+  font-weight: bold;
+  color: var(--primary-color) !important;
+  margin-top: 10px;
+  padding-left: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+/* Ảnh minh họa */
+body.typeofskin .skin-image {
+  border-radius: var(--border-radius);
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.typeofskin .skin-image:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Danh sách */
+body.typeofskin ul {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+body.typeofskin ul li {
+  color: rgba(0, 0, 0, 0.88);
+  font-weight: 600;
+  font-size: 20px;
+  list-style-type: circle;
+}
+
+body.typeofskin li::marker {
+  color: var(--secondary-color);
+  font-size: 16px;
+}
+
+/* Phần giới thiệu bài quiz */
+body.typeofskin .quiz-intro {
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px !important;
+  color: #444;
+  margin-top: 20px;
+  background: #ffe6eb;
+  padding: 10px;
+  border-radius: var(--border-radius);
+}
+
+/* Nút bấm */
+body.typeofskin .quiz-button {
+  margin: 20px auto;
+  background: linear-gradient(135deg, #8b5a2b, #6d4c41);
+  box-shadow: 0 4px 8px rgba(109, 76, 65, 0.3);
+  font-weight: bold;
+  border-left: none;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 180px;
+  height: 48px;
+  line-height: 1.2; */
+}
+
+/* Hiệu ứng ánh sáng khi hover */
+body.typeofskin .quiz-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover: Làm sáng màu và đẩy nút nhẹ lên */
+body.typeofskin .quiz-button:hover {
+  background: linear-gradient(135deg, #a67b5b, #5d4037) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(109, 76, 65, 0.4);
+}
+
+body.typeofskin .quiz-button:hover::after {
+  opacity: 1;
+}
+
+/* Khi bấm xuống */
+body.typeofskin .quiz-button:active {
+  transform: translateY(2px);
+  box-shadow: inset 4px 4px 8px rgba(109, 76, 65, 0.4);
+}
+
+/* Animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
