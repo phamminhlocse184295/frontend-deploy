@@ -1,5 +1,5 @@
-import BookingListForSkinTherapist from "../components/BookedListForSkinTherapist";
+// import BookingListForSkinTherapist from "../components/BookedListForSkinTherapist";
 
-export default function SkinTherapistAppoinmentPage() {
-  return <BookingListForSkinTherapist />;
-}
+// export default function SkinTherapistAppoinmentPage() {
+//   return <BookingListForSkinTherapist />;
+// }

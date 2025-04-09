@@ -9,7 +9,7 @@ import Register from "./features/authentication/components/Register";
 import Home from "./pages/Home";
 import WorkVolume from "./features/work_volume/WorkVolume";
 import UserListPage from "./features/user/pages/UserListPage";
-import UserDetail from "./features/user/components/UserListDetail";
+// import UserDetail from "./features/user/components/UserListDetail";
 import { PagePath } from "./enums/page-path.enum";
 import Profile from "./features/authentication/components/Profile";
 import SidebarMenu from "./components/SidebarMenu";
@@ -67,7 +67,7 @@ const App = () => {
             <Route path={PagePath.HOME} element={<Home />}></Route>
             <Route path={PagePath.WORK_VOLUME} element={<WorkVolume />} />
             <Route path={PagePath.USER_MANAGEMENT} element={<UserListPage />} />
-            <Route path={PagePath.USER_DETAIL} element={<UserDetail />} />
+            {/* <Route path={PagePath.USER_DETAIL} element={<UserDetail />} /> */}
             <Route path={PagePath.PROFILE} element={<Profile />} />
             <Route path={PagePath.BOOKING} element={<BookingListTable />} />
             <Route path={PagePath.BOOKING_DETAIL} element={<BookingDetail />} />

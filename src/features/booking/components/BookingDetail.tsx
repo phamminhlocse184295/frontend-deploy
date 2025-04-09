@@ -6,7 +6,7 @@ import {
   Row,
   Col,
   Breadcrumb,
-  Typography,
+  // Typography,
   message,
   Select,
   Button,
@@ -36,7 +36,7 @@ import { CustomerDto } from "../../user/dto/customer.dto";
 import useAuthStore from "../../authentication/hooks/useAuthStore";
 import { RoleCode } from "../../../enums/role.enum";
 import { Status } from "../../../enums/status-booking";
-import TextArea from "antd/es/input/TextArea";
+// import TextArea from "antd/es/input/TextArea";
 import { PagePath } from "../../../enums/page-path.enum";
 import { useUpdateNote } from "../hooks/useUpdateNoteBooking";
 import { useSlots } from "../../services/hooks/useGetSlot";
@@ -44,7 +44,7 @@ import { SlotDto } from "../../services/dto/slot.dto";
 import { useGetServiceByTherapistId } from "../../services/hooks/useGetServiceByTherapistId";
 import { ServiceDto } from "../../services/dto/get-service.dto";
 
-const { Title } = Typography;
+// const { Title } = Typography;
 
 const BookingDetail = () => {
   const { user } = useAuthStore();
@@ -78,7 +78,7 @@ const BookingDetail = () => {
     null
   );
   const [selectedServiceAmount, setSelectedServiceAmount] = useState<number>(0);
-  const [note, setNote] = useState<string>(booking?.note || "");
+  // const [note, setNote] = useState<string>(booking?.note || "");
 
   const activeServiceTherapist = serviceTherapist?.filter(
     (service) => service.status === "Active"
@@ -101,11 +101,11 @@ const BookingDetail = () => {
     }
   }, [booking, activeServiceTherapist, selectedServiceId, isEditing]);
 
-  useEffect(() => {
-    if (booking?.note !== undefined) {
-      setNote(booking.note);
-    }
-  }, [booking]);
+  // useEffect(() => {
+  //   if (booking?.note !== undefined) {
+  //     setNote(booking.note);
+  //   }
+  // }, [booking]);
 
   if (isLoading) {
     return <Spin size="large" />;
